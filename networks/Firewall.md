@@ -48,7 +48,7 @@
 
 После введения логина и пароля подключение выполняется к vm2, значит настройки выполнены корректно.
 
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/Firewal2_010.png)
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Firewal2_012.png)
 
 
 
