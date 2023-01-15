@@ -49,6 +49,3 @@
 После введения логина и пароля подключение выполняется к vm2, значит настройки выполнены корректно.
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Firewall_012.png)
-
-
-
