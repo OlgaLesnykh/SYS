@@ -5,3 +5,6 @@
 - 401 Unauthorized - Пользователь не авторизован для просмотра страницы;
 - 429 Too Many Requests - Превышен лимит запросов от пользователя.
 # Задание 2
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/HTTP_HTTPS_001.png)
+# Задание 3
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/HTTP_HTTPS_002.png)
