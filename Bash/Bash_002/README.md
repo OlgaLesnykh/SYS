@@ -2,7 +2,7 @@
 Скрипт:    
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_011.png)
 
-Файл со скриптом 1.sh [здесь]()    
+Файл со скриптом 1.sh [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/Bash/Bash_002/1.sh)    
 Результат выполнения скрипта:    
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_012.png)
@@ -10,7 +10,7 @@
 Скрипт:    
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_013.png)
 
-Файл со скриптом 2.sh [здесь]()    
+Файл со скриптом 2.sh [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/Bash/Bash_002/2.sh)    
 Результат выполнения скрипта:    
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_014.png)
@@ -18,7 +18,7 @@
 Скрипт:    
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_017.png)
 
-Файл со скриптом 3.sh [здесь]()    
+Файл со скриптом 3.sh [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/Bash/Bash_002/3.sh)    
 Результат выполнения скрипта:    
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_022.png)    
@@ -31,7 +31,7 @@
 Скрипт:    
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_023.png)
 
-Файл со скриптом 4.sh [здесь]()    
+Файл со скриптом 4.sh [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/Bash/Bash_002/4.sh)    
 Результат выполнения скрипта:    
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_024.png)
