@@ -28,3 +28,10 @@
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_021.png)    
 Судя по всему ошибка в скрипте, сама не смогла ее обнаружить и устранить, прошу Вашей помощи.
 # Задание 4
+Скрипт:    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_023.png)
+
+Файл со скриптом 4.sh [здесь]()    
+Результат выполнения скрипта:    
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Bash_024.png)
