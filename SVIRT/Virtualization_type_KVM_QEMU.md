@@ -11,9 +11,10 @@
 # Задание 2
 Устанавливаю QEMY:    
 ```sudo apt install qemu-kvm qemu qemu-system```    
-Создаю диск для будущей ВМ по команде ```qemu-img create -f qcow2 VM_test 1G```    
-Запускаю установку ВМ: ``````    
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_024.png)
+Создаю диск для будущей ВМ по команде ```qemu-img create -f qcow2 VM1_test 4G```    
+Запускаю установку ВМ по команде: ```qemu-system-x86_64 -hda VM1_test -boot d -cdrom ./alpine-standard-3.13.5-x86 -m 512```, открывается окно QEMU:    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_025.png)   
+ВМ работает.
 # Задание 3
 Устанавливаю libvirt0 и virt-manager    
 Создаю виртуальную машину VM1, воспользовавшись командой:
