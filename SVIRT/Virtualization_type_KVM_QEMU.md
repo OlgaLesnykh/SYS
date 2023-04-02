@@ -28,3 +28,12 @@
 Судя по всему, установка выполнена успешно.    
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_023.png)  
 # Задание 4
+Разворачиваю в VirtualBox сервер GNS3:    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_026.png)    
+Подключаюсь к GNS3 серверу через браузер по ip.    
+Возвращаюсь к ВМ на Debian, создаю две ВМ с ОС alpine, аналогично, как в задание 3.    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_028.png)    
+Добавляю объекты в проект GNS3, поправляю конфиг, проверяю работоспособность сети. Вроде бы всё, как должно быть:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_027.png) 
