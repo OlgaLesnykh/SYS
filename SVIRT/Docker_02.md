@@ -71,5 +71,26 @@ zabbix-server:
     restart: always
 ```    
 # Задание 6
+```
+zabbix_wgui:
+    image: zabbix/zabbix-web-apache-pgsql
+    links:
+      - lesnykhoa-db
+      - zabbix-server
+    container_name: lesnykhoa-netology-zabbix-frontend
+    environment:
+      DB_SERVER_HOST: '172.22.0.2'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: lesnykhoa12!3!!
+      ZBX_SERVER_HOST: "lesnykhoa-netology-zabbix-frontend"
+      PHP_TZ: "Europe/Moscow"
+    ports:
+      - "80:8080"
+      - "443:8443"
+    networks:
+      lesnykhoa-my-netology-hw:
+        ipv4_address: 172.22.0.5
+    restart: always
+```    
 # Задание 7
 # Задание 8
