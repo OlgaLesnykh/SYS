@@ -53,6 +53,23 @@ pgadmin:
 ```    
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_042.png)    
 # Задание 5
+```
+zabbix-server:
+    image: zabbix/zabbix-server-pgsql
+    links:
+      - lesnykhoa-db
+    container_name: lesnykhoa-zabbix-netology
+    environment:
+      DB_SERVER_HOST: '172.22.0.2'
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: lesnykhoa12!3!!
+    ports:
+      - "10051:10051"
+    networks:
+      lesnykhoa-my-netology-hw:
+        ipv4_address: 172.22.0.4
+    restart: always
+```    
 # Задание 6
 # Задание 7
 # Задание 8
