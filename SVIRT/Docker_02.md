@@ -34,8 +34,24 @@ services:
     networks:
       lesnykhoa-my-netology-hw:
         ipv4_address: 172.22.0.2
-    restart: always # Режим перезапуска контейнера. Контейнер всегда будет перезапускаться```
+    restart: always # Режим перезапуска контейнера. Контейнер всегда будет перезапускаться
+  ```    
 # Задание 4
+```
+pgadmin:
+    image: dpage/pgadmin4
+    container_name: lesnykhoa-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: lesnykhoa@ilove-netology.com
+      PGADMIN_DEFAULT_PASSWORD: 123
+    ports:
+      - "61231:80"
+    networks:
+      lesnykhoa-my-netology-hw:
+        ipv4_address: 172.22.0.3
+    restart: always
+```    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_042.png)    
 # Задание 5
 # Задание 6
 # Задание 7
