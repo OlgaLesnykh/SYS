@@ -16,9 +16,25 @@ networks:
     ipam:
       config:
       - subnet: 172.22.0.0/24
-
+```
 # Задание 3
-
+```
+services:
+  lesnykhoa-db:
+    image: postgres:latest # Образ, который мы будем использовать
+    container_name: lesnykhoa-netology-db # Имя, которым будет называться наш контейнер
+    ports: # Порты, которые мы пробрасываем с нашего докер сервера внутрь контейнера
+      - 5432:5432
+    volumes: # Папка, которую мы пробросим с докер сервера внутрь контейнера
+      - ./pg_data:/var/lib/postgresql/data/pgdata
+    environment: # Переменные среды
+      POSTGRES_PASSWORD: lesnykhoa12!3!! # Задаём пароль от пользователя postgres
+      POSTGRES_DB: lesnykhoa-db # БД которая сразу же будет создана
+      PGDATA: /var/lib/postgresql/data/pgdata # Путь внутри контейнера, где будет папка pgdata
+    networks:
+      lesnykhoa-my-netology-hw:
+        ipv4_address: 172.22.0.2
+    restart: always # Режим перезапуска контейнера. Контейнер всегда будет перезапускаться```
 # Задание 4
 # Задание 5
 # Задание 6
