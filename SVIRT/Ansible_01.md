@@ -11,18 +11,31 @@ IAC (Infrastructure-as-Code) - Инфраструктура как код - по
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_060.png)    
 2. Создаем две ВМ, которыми будем управлять:    
     
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_064.png)    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_001.png)    
 3. Создаем файл inventory, прописываем туда внешние ip адреса только что созданных ВМ:    
     
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_065.png)    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_002.png)    
     
 Указываем в файле Ansible.cfg путь до файла inventory:    
     
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_066.png)    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_003.png)    
     
 4. Проверяем доступность хостов с помощью модуля ping:    
     
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_067.png)    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_004.png)    
 # Задание 3
 Параметр forks задает количество параллельных ssh соединений (т.е выполнение каждой задачи осуществляется группами по тому количеству серверов одновременно, которое задано в этом параметре. По умолчанию forks равен 5, т.е Ansible запускает задачу на первых пяти узлах, ждет, пока она на них выполнится, затем берет следующие пять узлов и т.д. Когда задача выполнится на всех узлах, Ansible берет следующую задачу из плейбука и опять начинает выполнять ее партиями по пять узлов.). А параметр serial, если я всё правильно поняла, определяет количество серверов, на которых будут выполнены все задачи - т.е., если serial задать, например, равным 10, то выполнение задач будет выглядеть следующим образом: Ansible запускает первую задачу на первых пяти узлах (forks=5), ждет, пока она на них выполнится, затем берет следующие пять узлов - также запускает первую задачу, а затем вместо того, чтобы взять следующие 5 узлов для выполнения первой задачи - берет первые пять узлов для выполнения второй задачи, вторые пять узлов для выполнения второй задачи (serial=10) и опять переходит к первым пяти узлам для выполнения третьей задачи - до тех пор пока весь плейбук не будет выполнен для первой серии (из 10 хостов), затем переходит ко второй серии (следующие 10 хостов) и так до тех пор, пока все задачи не будут выполнены для всех управляемых хостов.
 # Задание 4
+1. Устанавливаем на управляемых хостах пакет nginx: ```ansible all -b -m apt -a "name=nginx state=present"```    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_005.png)    
+    
+2. Проверяем статус сервиса nginx на управляемых хостах: ```ansible all -b -m shell -a "systemctl status nginx"```    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_006.png)    
+
+3. Создаем файл с содержимым «I like Linux» по пути /tmp/netology.txt:     
+ ```ansible all -m shell -a "echo 'I like Linux' > /tmp/netology.txt"```    
+и проверяем: ```ansible all -m shell -a "cat /tmp/netology.txt"```    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_007.png)
