@@ -9,6 +9,19 @@ IAC (Infrastructure-as-Code) - Инфраструктура как код - по
 1. Устанавливаем Ansible:    
     
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_060.png)    
-2. 
+2. Создаем две ВМ, которыми будем управлять:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_064.png)    
+3. Создаем файл inventory, прописываем туда внешние ip адреса только что созданных ВМ:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_065.png)    
+    
+Указываем в файле Ansible.cfg путь до файла inventory:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_066.png)    
+    
+4. Проверяем доступность хостов с помощью модуля ping:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_067.png)    
 # Задание 3
 # Задание 4
