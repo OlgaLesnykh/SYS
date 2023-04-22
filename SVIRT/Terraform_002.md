@@ -7,4 +7,6 @@
     
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_054.png)    
     
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_055.png)    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_056.png)    
+     
+Создаем для Ansible файл inventory и проверяем пинг.
