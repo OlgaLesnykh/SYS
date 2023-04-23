@@ -11,6 +11,10 @@
     
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_073.png)    
     
-Создаем для Ansible playbook, который установит nginx, передаст конфигурационные файлы nginx:    
+Создадим для Ansible playbook, который установит nginx, передаст конфигурационный файл nginx:    
     
-
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_075.png)    
+    
+Запускаем его, убеждаемся в успешности выполнения всех задач, проверяем:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/SVIRT_076.png)
