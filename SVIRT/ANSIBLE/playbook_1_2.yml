@@ -1,0 +1,15 @@
+---
+- name: "Task 1.2"
+  hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+    - name: "Install tuned"
+      apt:
+        name: tuned
+        state: present
+    - name: "Start tuned"
+      service:
+        name: tuned
+        state: started
+        enabled: yes
