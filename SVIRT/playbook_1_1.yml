@@ -1,0 +1,9 @@
+---
+- name: "Task 1.1"
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: "Download file"
+      get_url:
+        url: https://downloads.apache.org/kafka/3.4.0/kafka-3.4.0-src.tgz
+        dest: /home/user/kafka-3.4.0-src.tgz
