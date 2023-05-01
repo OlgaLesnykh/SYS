@@ -1,5 +1,5 @@
 # Задание 1
-1.1 Скачиваем архив на управляемом хосте. Playbook:
+1.1 Скачиваем архив на управляемом хосте, создаем директорию, в которую будем распаковывать архив, распаковываем архив. Playbook:
 ```
 ---
 - name: "Task 1.1"
@@ -26,4 +26,35 @@
     
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_011.png)    
     
-1.2 
+Подключаемся к хосту, проверяем корректность выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_013.png)    
+    
+1.2 Устанавливаем пакет tuned, запускаем сервис, добавляем сервис в автозагрузку:    
+```
+---
+- name: "Task 1.2"
+  hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+    - name: "Install tuned"
+      apt:
+        name: tuned
+        state: present
+    - name: "Start tuned"
+      service:
+        name: tuned
+        state: started
+        enabled: yes
+ ```    
+Файл с плейбуком [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/SVIRT/ANSIBLE/playbook_1_2.yml).    
+Результат выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_012.png)    
+    
+Подключаемся к хосту, проверяем корректность выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_014.png)    
+    
+1.3
