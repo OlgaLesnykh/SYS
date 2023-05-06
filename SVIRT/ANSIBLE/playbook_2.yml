@@ -1,0 +1,14 @@
+---
+- name: "Task 2"
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - name: "Copy file /etc/motd"
+      template:
+        src: motd.j2
+        dest: /etc/motd
+        force: yes
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
