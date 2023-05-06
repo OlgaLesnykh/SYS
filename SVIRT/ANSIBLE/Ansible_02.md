@@ -182,4 +182,8 @@
     
 Результат выполнения:    
     
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_020.png)    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_022.png)    
+    
+Проверяем:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_023.png)    
