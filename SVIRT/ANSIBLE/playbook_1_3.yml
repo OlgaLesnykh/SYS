@@ -1,0 +1,16 @@
+---
+- name: "Task 1.3"
+  hosts: all
+  become: true
+  vars:
+    file_motd: /root/ansible/motd 
+  gather_facts: true
+  tasks:
+    - name: "Copy file /etc/motd"
+      copy:
+        src: "{{ file_motd }}"
+        dest: /etc/motd
+        force: yes
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
