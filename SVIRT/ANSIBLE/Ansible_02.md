@@ -87,3 +87,42 @@
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_016.png)    
     
 # Задание 2
+Использую templates. Имя хоста задаю в файле hosts, для вывода ip-адресов использую встроенные переменные.    
+    
+```
+---
+- name: "Task 2"
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - name: "Copy file /etc/motd"
+      template:
+        src: motd.j2
+        dest: /etc/motd
+        force: yes
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
+```    
+    
+Файл с плейбуком [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/SVIRT/ANSIBLE/playbook_2.yml).    
+Содержимое файла motd.j2:    
+    
+```
+      HELLO, DEAR ADMIN!
+      Input IP-adress is {{ ansible_facts.all_ipv4_addresses[0] }}
+      Output IP-adress is {{ inventory_hostname }}
+      hostname is {{ host }}
+      Have a good day!
+```    
+    
+Результат выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_017.png)    
+    
+Подключаемся к хосту, проверяем корректность выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_019.png)    
+
+# Задание 3
