@@ -126,3 +126,60 @@
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_019.png)    
 
 # Задание 3
+Плейбук:    
+    
+```
+---
+- name: "Task 3"
+  hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - apache
+```   
+    
+Файл с плейбуком [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/SVIRT/ANSIBLE/playbook_3.yml).    
+    
+Роль:    
+    
+```
+---
+- name: "Install apache"
+  apt:
+    name: apache2
+    state: present
+- name: "Copy file index.html"
+  template:
+    src: index.html.j2
+    dest: /var/www//html/index.html
+    force: yes
+    owner: root
+    group: root
+    mode: "u=rwx,g=rx,o=rx"
+- name: "Copy file conf"
+  copy:
+    src: /root/ansible/netology.conf
+    dest: /etc/apache2/sites-available/000-default.conf
+    force: yes
+    owner: root
+    group: root
+    mode: "u=rwx,g=rx,o=rx"
+- name: "Restart apache"
+  service:
+    name: apache2
+    state: restarted
+    enabled: yes
+- name: Waits for port 80 of any IP to close active connections, don't start checking for 10 seconds
+  wait_for:
+    port: 80
+    delay: 10
+    state: present
+- uri:
+    url: http://{{ inventory_hostname }}
+```    
+    
+Файл с ролью [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/SVIRT/ANSIBLE/main.yml).
+    
+Результат выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_020.png)    
