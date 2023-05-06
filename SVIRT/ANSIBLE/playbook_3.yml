@@ -1,0 +1,7 @@
+---
+- name: "Task 3"
+  hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - apache
