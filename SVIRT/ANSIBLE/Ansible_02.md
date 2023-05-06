@@ -57,4 +57,33 @@
     
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_014.png)    
     
-1.3
+1.3 Для изменения приветствия копируем новый файл motd на управляемый хост. Предварительно в файле меняем дефолтный текст на "HELLO, DEAR ADMIN!!!:)". Задаем путь к файлу как переменную:    
+    
+```
+---
+- name: "Task 1.3"
+  hosts: all
+  become: true
+  vars:
+    file_motd: /root/ansible/motd 
+  gather_facts: true
+  tasks:
+    - name: "Copy file /etc/motd"
+      copy:
+        src: "{{ file_motd }}"
+        dest: /etc/motd
+        force: yes
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
+```    
+Файл с плейбуком [здесь](https://github.com/OlgaLesnykh/SYS/blob/main/SVIRT/ANSIBLE/playbook_1_3.yml).    
+Результат выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_015.png)    
+    
+Подключаемся к хосту, проверяем корректность выполнения:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/ANSIBLE_016.png)    
+    
+# Задание 2
