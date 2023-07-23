@@ -22,4 +22,18 @@
 
 Конфигурационный файл для второго сервера (резервного):    
 
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/HSRP_006.png)
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/HSRP_006.png)    
+
+На первой машине посмотрим ip адреса, видим наш виртуальный ip адрес 192.168.0.105:    
+    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/HSRP_007.png)    
+
+Остановим сервис nginx на первой машине и посмотрим статус сервиса keepalived, видим, что он перешел в состояние Fault, а также видим, что наш виртуальный ip адрес 192.168.0.105 пропал из списка ip адресов:    
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/HSRP_008.png)    
+
+Посмотрим статус сервиса keepalived на второй машине, видим, что он перешел в состояние Master, а также видим, что наш виртуальный ip адрес 192.168.0.105 появился в списке ip адресов:    
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/HSRP_009.png)    
+
+При изменение названия файла index.nginx-debian.html на первой машине или его удалении процесс выполняется аналогичным образом.
