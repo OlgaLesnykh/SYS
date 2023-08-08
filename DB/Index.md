@@ -15,10 +15,10 @@ FROM payment
 JOIN rental ON rental.rental_date=payment.payment_date
 JOIN customer ON customer.customer_id=rental.customer_id
 JOIN inventory ON inventory.inventory_id=rental.inventory_id
-WHERE DATE(payment.payment_date) = '2005-07-30'
+WHERE payment_date >= '2005-07-30' and payment_date < DATE_ADD('2005-07-30', INTERVAL 1 DAY)
 GROUP BY customer.customer_id
 ORDER BY customer.last_name;
 ```
 explain analyze запроса после оптимизации:    
-![](https://github.com/OlgaLesnykh/screenshots/blob/main/Index_003.png)    
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Index_004.png)    
 Запрос выполняется моментально.
