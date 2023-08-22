@@ -8,3 +8,4 @@
 # Задание 3. Удаление по TTL в Memcached
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Caching_002.png)
 # Задание 4. Запись данных в Redis
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Caching_003.png)
