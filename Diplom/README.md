@@ -58,3 +58,8 @@
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_014.png)    
 
+3. На виртуальной машине для Elasticsearch разворачивается Elasticsearch при выполнении роли elasticsearch, копируется файл конфигурации. На виртуальной машине для kibana разворачивается kibana, копируется файл конфигурации. На web-сервера устанавливается Filebeat, копируются файлы конфигурации. Web-интерфейс доступен по адресу http://158.160.74.207:5601.
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_015.png)    
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_016.png)    
