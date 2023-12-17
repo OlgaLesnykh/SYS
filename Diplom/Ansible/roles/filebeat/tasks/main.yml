@@ -1,0 +1,38 @@
+---
+- name: update cashe
+  apt:
+    update_cache: yes
+- name: install gnupg, apt-transport-https
+  apt:
+    name:
+      - apt-transport-https
+      - gnupg
+    state: present
+- name: install filebeat
+  apt:
+    deb: "{{ package_source }}"
+- name: copy file filebeat.yml
+  template:
+    src: filebeat.yml.j2
+    dest: /etc/filebeat/filebeat.yml
+    owner: root
+    group: root
+    mode: 0600
+    force: true
+- name: reload filebeat
+  systemd:
+    daemon_reload: true
+    name: filebeat.service
+    state: started
+- name: Restart nginx
+  service:
+    name: nginx
+    state: restarted
+- name: Restart filebeat
+  service:
+    name: filebeat.service
+    state: started
+- name: Enable filebeat
+  service:
+    name: filebeat.service
+    enabled: yes
