@@ -1,0 +1,30 @@
+---
+- name: update cashe
+  apt:
+    update_cache: yes
+- name: Install gnupg, apt-transport-https
+  apt:
+    name:
+      - apt-transport-https
+      - gnupg
+    state: present
+- name: Install kibana
+  apt:
+    deb: "{{ package_source }}"
+- name: copy file kibana.yml
+  template:
+    src: kibana.yml.j2
+    dest: /etc/kibana/kibana.yml
+    owner: root
+    group: root
+    mode: 0644
+    force: true
+- name: reload kibana
+  systemd:
+    name: kibana.service
+    state: started
+    daemon_reload: true
+- name: restart kibana
+  systemd:
+    name: kibana.service
+    state: restarted
