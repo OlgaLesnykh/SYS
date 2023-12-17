@@ -1,0 +1,35 @@
+---
+- name: Install nginx and copy file index.html
+  hosts: web_servers
+  become: true
+  roles:
+    - nginx
+- name: Install zabbix-agent
+  hosts:
+    - web_servers
+    - elasticsearch
+    - kibana
+    - bastion
+  become: true
+  roles:
+    - zabbix-agent
+- name: Install zabbix server
+  hosts: zabbix
+  become: true
+  roles:
+    - zabbix
+- name: Install elasticsearch server
+  hosts: elasticsearch
+  become: true
+  roles:
+    - elasticsearch
+- name: Install kibana server
+  hosts: kibana
+  become: true
+  roles:
+    - kibana
+- name: Install filebeat
+  hosts: web_servers
+  become: true
+  roles:
+    - filebeat
