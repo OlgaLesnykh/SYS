@@ -52,4 +52,9 @@
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_011.png)    
 
-2. 
+2. На все виртуальные машины устанавливается zabbix-agent, на zabbix-сервере соответственно разворачивается zabbix-сервер. Web-интерфейс доступен по адресу http://158.160.71.201/zabbix. Логин ```Admin``` пароль ```zabbix``` стандартно. Машины с Zabbix-agent подключаются к zabbix-серверу автоматически при выполнении роли zabbix через API. Также, через API Zabbix, создаются дашборды web-серверов.    
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_013.png)    
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_014.png)    
+
