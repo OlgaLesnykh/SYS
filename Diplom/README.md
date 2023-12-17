@@ -43,3 +43,13 @@
 
 ![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_009.png)    
 # 3. Настройка с помощью Ansible
+Для настройки с помощью Ansible требуется перейти в директорию ~/ansible, проверить доступность созданных виртуальных машин командой ```ansible all -m ping```,  возможно, потребуется выполнить команду дважды:    
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_010.png)    
+
+Убедившись, что все виртуальные машины доступны, запускаем плейбук ```ansible-playbook playbook_diplom.yml``` и ждем завершения 6-9 минут. В результате:    
+1. На web-сервера устанавливается Nginx, выполняется обновление файла index.html. Сервис доступен по публичному адресу балансировщика http://158.160.138.211
+
+![](https://github.com/OlgaLesnykh/screenshots/blob/main/Diplom_011.png)    
+
+2. 
